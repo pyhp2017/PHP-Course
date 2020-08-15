@@ -1,0 +1,3 @@
+<?php
+
+$varInclude = "Hello World";
