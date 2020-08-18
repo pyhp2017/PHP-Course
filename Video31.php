@@ -145,5 +145,89 @@ $myXMLData =
 
 //Read From File
 
-$xml=simplexml_load_file("Video31.xml") or die("Error: Cannot create object");
-print_r($xml);
+// $xml=simplexml_load_file("Video31.xml") or die("Error: Cannot create object");
+// echo $xml->book[1]->title;
+// print_r($xml);
+
+
+
+
+//Loop
+
+// $xml=simplexml_load_file("Video31.xml") or die("Error: Cannot create object");
+// for($i=0 ; $i<count($xml->book) ; $i++)
+// {
+//     echo "Title: " . $xml->book[$i]->title . " , ";
+//     echo "Author: " . $xml->book[$i]->author . " , ";
+//     echo "Year: " . $xml->book[$i]->year . " , ";
+//     echo "Price: " . $xml->book[$i]->price;
+//     echo "\n\n";
+// }
+
+
+
+
+
+// PHP SimpleXML - Get Attribute Values
+
+// $xml=simplexml_load_file("Video31.xml") or die("Error: Cannot create object");
+// echo $xml->book[0]['category'] . "\n";
+
+
+
+
+
+//Initialize the XML parser
+// $parser=xml_parser_create();
+
+// //Function to use at the start of an element
+// function start($parser,$element_name,$element_attrs) {
+//     switch($element_name) {
+//         case "book":
+//         echo "-- book --\n";
+//     break;
+//         case "title":
+//         echo "title: ";
+//     break;
+//         case "author":
+//         echo "author: ";
+//     break;
+//         case "year":
+//         echo "year: ";
+//     break;
+//         case "price":
+//         echo "price: ";
+//     }
+// }
+
+// //Function to use at the end of an element
+// function stop($parser,$element_name) {
+//     echo "\n";
+// }
+
+// //Function to use when finding character data
+// function char($parser,$data) {
+//     echo $data;
+// }
+
+// //Specify element handler
+// xml_set_element_handler($parser,"start","stop");
+
+// //Specify data handler
+// xml_set_character_data_handler($parser,"char");
+
+// //Open XML file
+// $fp=fopen("Video31.xml","r");
+
+// //Read data
+// while ($data=fread($fp,4096)) {
+//     xml_parse($parser,$data,feof($fp)) or
+//     die (sprintf("XML Error: %s at line %d",
+//     xml_error_string(xml_get_error_code($parser)),
+//     xml_get_current_line_number($parser)));
+// }
+
+// //Free the XML parser
+// xml_parser_free($parser);
+
+
