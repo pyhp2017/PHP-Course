@@ -342,35 +342,35 @@ Compared to executing SQL statements directly, prepared statements have three ma
 //================== MySQL Select Data ==================
 
 
-// $servername = "localhost";
-// $username = "ahmad";
-// $password = "password";
-// $dbname = "school";
+$servername = "localhost";
+$username = "ahmad";
+$password = "password";
+$dbname = "school";
 
-// try
-// {
-//   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-//   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//   $stmt = $conn->prepare("SELECT id, name, email, phoneNumber, socialNumber FROM Students");
-//   $stmt->execute();
+try
+{
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $stmt = $conn->prepare("SELECT id, name, email, phoneNumber, socialNumber FROM Students");
+  $stmt->execute();
 
-//   // set the resulting array to associative
-//   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-//   foreach($stmt->fetchAll() as $key1=>$val1)
-//   {
-//     foreach($val1 as $key2=>$val2)
-//     {
-//       echo "$key2 : $val2" . " ==== ";
-//     }
-//     echo "\n";
-//   }
-//   // var_dump($stmt->fetchAll());
-// }
-// catch(PDOException $e) 
-// {
-//   echo "Error: " . $e->getMessage();
-// }
-// $conn = null;
+  // set the resulting array to associative
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  // foreach($stmt->fetchAll() as $key1=>$val1)
+  // {
+  //   foreach($val1 as $key2=>$val2)
+  //   {
+  //     echo "$key2 : $val2" . " ==== ";
+  //   }
+  //   echo "\n";
+  // }
+  var_dump($stmt->fetchAll());
+}
+catch(PDOException $e) 
+{
+  echo "Error: " . $e->getMessage();
+}
+$conn = null;
 
 
 //================== PHP MySQL Use The WHERE Clause ==================
