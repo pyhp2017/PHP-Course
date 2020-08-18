@@ -134,7 +134,7 @@ $myXMLData =
 // if ($xml === false) {
 //   echo "Failed loading XML: ";
 //   foreach(libxml_get_errors() as $error) {
-//     echo "<br>", $error->message;
+//     echo "\n", $error->message;
 //   }
 // } else {
 //   print_r($xml);
@@ -146,7 +146,7 @@ $myXMLData =
 //Read From File
 
 // $xml=simplexml_load_file("Video31.xml") or die("Error: Cannot create object");
-// echo $xml->book[1]->title;
+// echo $xml->book[0]->title;
 // print_r($xml);
 
 
@@ -171,7 +171,7 @@ $myXMLData =
 // PHP SimpleXML - Get Attribute Values
 
 // $xml=simplexml_load_file("Video31.xml") or die("Error: Cannot create object");
-// echo $xml->book[0]['category'] . "\n";
+// echo $xml->book[1]['category'] . "\n";
 
 
 
@@ -220,7 +220,8 @@ $myXMLData =
 // $fp=fopen("Video31.xml","r");
 
 // //Read data
-// while ($data=fread($fp,4096)) {
+// while ($data=fread($fp,4096)) 
+// {
 //     xml_parse($parser,$data,feof($fp)) or
 //     die (sprintf("XML Error: %s at line %d",
 //     xml_error_string(xml_get_error_code($parser)),
@@ -229,5 +230,3 @@ $myXMLData =
 
 // //Free the XML parser
 // xml_parser_free($parser);
-
-
