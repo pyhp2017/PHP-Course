@@ -19,7 +19,7 @@ Classic web pages, (which do not use AJAX) must reload the entire page if the co
 Examples of applications using AJAX: Google Maps, Gmail, Youtube, and Facebook tabs.
 
 
-     
+
 
 AJAX applications are browser- and platform-independent!
 
